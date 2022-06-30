@@ -2,24 +2,28 @@
 let studentScore = 80;
 
 // Process: Your Solution Code Here
-if (studentScore<=100) {
-    if (studentScore>=0) {
-        if (studentScore>=80) {
-            console.log("A");
-        }else if (studentScore>=65) {
-            console.log("B+");
-        } else if (studentScore>=50) {
-            console.log("B");
-        } else if (studentScore>=35) {
-            console.log("C");
-        } else {
-           console.log("D"); 
-        }   
-    }else {
+switch (true) {
+    case studentScore>100:
         console.log("invalid");
-    }
-}else {
-    console.log("invalid");
+        break
+    case studentScore>=80:
+        console.log("Nilai A");
+        break;
+    case studentScore>=65:
+        console.log("Nilai B+");
+        break
+    case studentScore>=50:
+        console.log("Nilai B");
+        break
+    case studentScore>=35:
+        console.log("Nilai C");
+        break
+    case studentScore>=0:
+        console.log("Nilai D");
+        break
+    default:
+        console.log("invalid");
+        break;
 }
 
 // Output
