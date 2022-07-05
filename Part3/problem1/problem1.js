@@ -1,17 +1,22 @@
 function playWithAsterik(n) {
 //   // Your Code Here
-  let s="";
-  for (let i = 1; i <= n; i++) {
-    for (let j = n; j>=i; j--) {
-      s+=" ";
-    }
-    for (let k = 1; k <= i+(i-1); k++) {
-      s+="*";
-    }
-    s+="\n";
+let result = ""
+for (let i = 1; i<=n; i++){
+  let print = ""
+  for (let j = 1; j<=n-i; j++){
+      print += " "
   }
-  return s;
+  for (let k = 1; k<=i; k++){
+      print += "* "
+  }
+  if (i==n) {
+    result+=print
+  }else{
+    result+=print+"\n"
+  }
+}
+return result;
 }
 console.log(playWithAsterik(5));
 
-playWithAsterik(5);
+module.exports=playWithAsterik;

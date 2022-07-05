@@ -3,14 +3,16 @@ let input1 = 6;
 let input2 = 20;
 
 // Your Code Here
-for (let i = input1; i >= 1; i--) {
-    if (input1%i===0) {
-        console.log(i);
+function faktorBilangan(n) {
+    let result="";
+    for (let i = n; i >= 1; i--) {
+        if (n%i===0) {
+            result+=i+"\n";
+        }
     }
+    return result;
 }
+console.log(faktorBilangan(input1));
+console.log(faktorBilangan(input2));
 
-for (let i = input2; i >= 1; i--) {
-    if (input2%i===0) {
-        console.log(i);
-    }
-}
+module.exports=faktorBilangan;

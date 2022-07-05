@@ -28,3 +28,5 @@ console.log(fullPrima(37)); // true
 console.log(fullPrima(41)); // false
 console.log(fullPrima(43)); // false
 console.log(fullPrima(53)); // true
+
+module.exports = fullPrima;
